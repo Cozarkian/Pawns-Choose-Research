@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="ImprovedGunTurrets" or defName="LongRangeTurrets" or defName="AdvanceWeaponSystems" or defName="EnergyWeaponSystems"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+		<value>
+			<rangedTech>1</rangedTech>
+		</value>
+	</Operation>
+</Patch>

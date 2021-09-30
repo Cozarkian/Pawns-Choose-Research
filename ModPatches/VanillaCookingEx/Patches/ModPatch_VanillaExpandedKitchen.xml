@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Vanilla Cooking Expanded -->
+	<Operation Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="VCE_CondimentsResearch" or defName="VCE_SoupCooking" or defName="VCE_Grilling" or defName="VCE_DeepFrying" or defName="VCE_Canning" or defName="VCE_CheeseMaking" or defName="VCE_StewCooking" or defName="VCE_SoyFermentation"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<cookingTech>1</cookingTech>
+			</value>
+	</Operation>
+</Patch>

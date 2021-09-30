@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Vanilla Brewing Expanded -->
+	<Operation Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="VBE_MixologyResearch" or defName="VBE_LiquorBrewing" or defName="VBE_EspressoMachine"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<cookingTech>1</cookingTech>
+			</value>
+	</Operation>	
+</Patch>

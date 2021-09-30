@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="Holodeck_Basic" or defName="Holodeck_Standard"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+					<craftTech>1</craftTech>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="Holodeck_AI"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+					<socialTech>1</socialTech>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

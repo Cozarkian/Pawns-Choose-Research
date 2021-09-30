@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- A dog said prosthetics -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="SimpleAnimalProsthetics" or defName="AnimalBionics"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+		<value>
+			<cyberTech>1</cyberTech>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="SimpleAnimalProsthetics" or defName="AnimalBionics" or defName="AnimalHeal"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+		<value>
+			<animalTech>1</animalTech>
+		</value>
+	</Operation>
+
+</Patch>
+

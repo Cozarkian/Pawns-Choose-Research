@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<!-- Backup_Power (by Veralin)-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Backup Power</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="BackupPower"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<craftTech>1</craftTech>
+				<constructionTech>1</constructionTech>
+			</value>
+		</match>
+	</Operation>
+
+<!-- Salted Meat (by Veralin) -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Salted Meat</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="SM_Salt_Conserving"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<cookingTech>1</cookingTech>
+			</value>
+		</match>
+	</Operation>
+
+
+</Patch>

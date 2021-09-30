@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="Megascreen"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+		<value>
+			<artTech>1</artTech>
+		</value>
+	</Operation>
+</Patch>

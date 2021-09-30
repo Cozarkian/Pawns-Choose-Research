@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- EPOE -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="BasicProsthetics" or defName="RibReplacements" or defName="SurrogateOrgans" or defName="SyntheticOrgans" or defName="EPOE_SyntheticRepair" or defName="BrainSurgery" or defName="EPOE_Glitterworld_Implants" or defName="EPOE_NeurologicalTreatment" or defName="EPOE_AIPersonaCoreImplants" or			defName="AdvancedBionics"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+						<medTech>1</medTech>
+						<cyberTech>1</cyberTech>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="EPOE_AIPersonaCoreImplants" or defName="EPOE_MAAIChip"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+						<socialTech>1</socialTech>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="EPOE_OrganicOptimizer"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+						<medTech>1</medTech>
+				</value>
+			</li>			
+		</operations>
+	</Operation>
+</Patch>
+

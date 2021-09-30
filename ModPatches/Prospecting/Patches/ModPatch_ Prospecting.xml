@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="PrsManualDrilling"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<miningTech>1</miningTech>
+			</value>
+	</Operation>		
+</Patch>

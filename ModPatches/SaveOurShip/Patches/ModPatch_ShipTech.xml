@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="ShipShuttleBay" or defName="ShipLifeSupport" or defName="ShuttlePersonal" or defName="ShuttleCargo" or defName="ShuttleHeavy" or defName="ShipSalvageBay"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+					<constructionTech>1</constructionTech>
+				</value>
+			</li>		
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="ShipTurretLaser" or defName="ShipTurretPlasma" or defName="ShipTurretKinetic" or defName="ShipTurretMedium" or defName="ShipTurretLarge" or defName="ShipTorpedoes" or defName="ShipTurretAC"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+					<rangedTech>1</rangedTech>
+				</value>
+			</li>				
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="ShipHeatsink" or defName="ShipShields" or defName="ShipCloaking"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+					<meleeTech>1</meleeTech>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="Crittersleep"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+					<animalTech>1</animalTech>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="ShipSpaceSuits" or defName="ShipSpaceSuitsHeavy" or defName="ShipCapacitor" or defName="HullFoam" or defName="ShipTurretLaser" or defName="ShipTurretPlasma" or defName="ShipTurretKinetic" or defName="ShipTurretMedium" or defName="ShipTurretLarge" or defName="ShipTorpedoes" or defName="ShipTurretAC"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+					<craftTech>1</craftTech>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ResearchProjectDef[defName="ShipSensorClusterAdv"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+				<value>
+					<socialTech>1</socialTech>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

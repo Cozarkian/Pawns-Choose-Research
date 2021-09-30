@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="GlassworksResearch" or defName="ReinforcedGlassResearch"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+		<value>
+			<constructionTech>1</constructionTech>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="DecorativeGlassResearch"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+		<value>
+			<artTech>1</artTech>
+		</value>
+	</Operation>
+</Patch>

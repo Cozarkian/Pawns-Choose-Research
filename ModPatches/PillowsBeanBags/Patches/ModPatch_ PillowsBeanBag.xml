@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ResearchProjectDef[defName="sd_pillowsCo_pillows_and_beanbags_research"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+		<value>
+			<craftTech>1</craftTech>
+		</value>
+	</Operation>
+</Patch>
