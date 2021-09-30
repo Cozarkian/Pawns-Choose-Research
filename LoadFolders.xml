@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<loadFolders>
+	<v1.2>
+		<li IfModActive="Cozarkian.VarietyMatters.Meals">ModPatches\VarietyMeals</li>
+		<li IfModActive="Atlas.AndroidTiers">ModPatches\AndroidTiers</li>
+		<li IfModActive="Mlie.Aquarium">ModPatches\Aquarium</li>
+		<li IfModActive="TranslucencY.BrainInAJar">ModPatches\BrainInAJar</li>
+		<li IfModActive="Mlie.CallofCthulhuCults">ModPatches\CallofCthulhuCults</li>
+		<li IfModActive="Mlie.CallofCthulhuFactions">ModPatches\CallofCthulhuFactions</li>
+		<li IfModActive="fluffy.colonymanager">ModPatches\ColonyManager</li>
+		<li IfModActive="CETeam.CombatExtended">ModPatches\CombatExtended</li>		
+		<li IfModActive="spoonshortage.ADogSaidAnimalProsthetics">ModPatches\DogSaid</li>
+		<li IfModActive="Dubwise.DubsBadHygiene">ModPatches\DubsBadHygiene</li>
+		<li IfModActive="RusticFox.ExoticJoy">ModPatches\ExoticJoy</li>
+		<li IfModActive="youhaveavirus.ExtendedTurrets">ModPatches\ExtendedTurrets</li>
+		<li IfModActive="Mlie.FencesAndFloors">ModPatches\FencesFloors</li>
+		<li IfModActive="fluffy.fluffybreakdowns">ModPatches\FluffyBreakdowns</li>
+		<li IfModActive="sarg.geneticrim">ModPatches\Genetic Rim</li>
+		<li IfModActive="NanoCE.GlassLights">ModPatches\GlassLights</li>
+		<li IfModActive="GT.Sam.GlitterTech">ModPatches\GlitterTech</li>
+		<li IfModActive="Mlie.SdGoodnight">ModPatches\Goodnight</li>
+		<li IfModActive="zymex.HospitalsExtended">ModPatches\HospitalsExtended</li>
+		<li IfModActive="Haplo.Miscellaneous.TurretBaseAndObjects">ModPatches\MiscTurrets</li>
+		<li IfModActive="CP.Military.Furniture">ModPatches\MilitaryFurniture</li>
+		<li IfModActive="Mlie.CallofCthulhuIndustrialAge">ModPatches\IndustrialAge</li>
+		<li IfModActive="cucumpear.LEDlights">ModPatches\LEDLights</li>
+		<li IfModActive="Mlie.SDPillowsAndBeanbags">ModPatches\PillowsBeanBags</li>
+		<li IfModActive="Haplo.PowerSwitch">ModPatches\PowerSwitch</li>
+		<li IfModActive="Mlie.Prospecting">ModPatches\Prospecting</li>
+		<li IfModActive="kongmd.qee">ModPatches\QEE</li>
+		<li IfModActive="UnlimitedHugs.RemoteTech">ModPatches\RemoteTech</li>
+		<li IfModActive="Dubwise.Rimefeller">ModPatches\Rimefeller</li>
+		<li IfModActive="spdskatr.projectrimfactory">ModPatches\Rimfactory</li>
+		<li IfModActive="Crustypeanut.RC2.Core">ModPatches\RimCuisine2</li>
+		<li IfModActive="rimsenal.core">ModPatches\Rimsenal</li>
+		<li IfModActive="Torann.ARimworldOfMagic">ModPatches\RimworldMagic</li>
+		<li IfModActive="Mlie.RoadsOfTheRim">ModPatches\RoadsoftheRim</li>
+		<li IfModActive="ratys.rtfuse, ratys.rtsolarflareshield">ModPatches\RT Mods</li>
+		<li IfModActive="kentington.saveourship2">ModPatches\SaveOurShip</li>
+		<li IfModActive="Mlie.SimplyMoreBridges">ModPatches\SimplyMoreBridges</li>
+		<li IfModActive="Albion.SparklingWorlds.Full, Albion.SparklingWorlds.Core">ModPatches\Sparkling Worlds</li>
+		<li IfModActive="GT.Sam.TilledSoil">ModPatches\TilledSoil</li>
+		<li IfModActive="Mlie.TropickappRainforestMod">ModPatches\TropickappRainforestMod</li>
+		<li IfModActive="nephlite.orbitaltradecolumn">ModPatches\UtilityColumns</li>
+		<li IfModActive="VanillaExpanded.VBrewE">ModPatches\VanillaBrewingEx</li>
+		<li IfModActive="VanillaExpanded.VCookE">ModPatches\VanillaCookingEx</li>
+		<li IfModActive="VanillaExpanded.VPlantsESucculents">ModPatches\VanillaPlantsEx</li>
+		<li IfModActive="VanillaExpanded.VanillaTraitsExpanded">ModPatches\VanillaTraitsEx</li>
+		<li IfModActive="XCOMWeapons.velcroboy333, XCOMArmor.velcroboy333">ModPatches\XCOM</li>
+		<li>Common</li>
+	</v1.2>
+	<!--<v1.3>
+		<li IfModActive="Cozarkian.VarietyMatters.Meals">ModPatches\VarietyMeals</li>
+		<li IfModActive="Atlas.AndroidTiers">ModPatches\AndroidTiers</li>
+		<li IfModActive="Mlie.Aquarium">ModPatches\Aquarium</li>
+		<li IfModActive="TranslucencY.BrainInAJar">ModPatches\BrainInAJar</li>
+		<li IfModActive="Mlie.CallofCthulhuCults">ModPatches\CallofCthulhuCults</li>
+		<li IfModActive="Mlie.CallofCthulhuFactions">ModPatches\CallofCthulhuFactions</li>
+		<li IfModActive="fluffy.colonymanager">ModPatches\ColonyManager</li>
+		<li IfModActive="CETeam.CombatExtended">ModPatches\CombatExtended</li>		
+		<li IfModActive="spoonshortage.ADogSaidAnimalProsthetics">ModPatches\DogSaid</li>
+		<li IfModActive="Dubwise.DubsBadHygiene">ModPatches\DubsBadHygiene</li>
+		<li IfModActive="RusticFox.ExoticJoy">ModPatches\ExoticJoy</li>
+		<li IfModActive="youhaveavirus.ExtendedTurrets">ModPatches\ExtendedTurrets</li>
+		<li IfModActive="Mlie.FencesAndFloors">ModPatches\FencesFloors</li>
+		<li IfModActive="fluffy.fluffybreakdowns">ModPatches\FluffyBreakdowns</li>
+		<li IfModActive="sarg.geneticrim">ModPatches\Genetic Rim</li>
+		<li IfModActive="NanoCE.GlassLights">ModPatches\GlassLights</li>
+		<li IfModActive="GT.Sam.GlitterTech">ModPatches\GlitterTech</li>
+		<li IfModActive="Mlie.SdGoodnight">ModPatches\Goodnight</li>
+		<li IfModActive="zymex.HospitalsExtended">ModPatches\HospitalsExtended</li>
+		<li IfModActive="Haplo.Miscellaneous.TurretBaseAndObjects">ModPatches\MiscTurrets</li>
+		<li IfModActive="CP.Military.Furniture">ModPatches\MilitaryFurniture</li>
+		<li IfModActive="Mlie.CallofCthulhuIndustrialAge">ModPatches\IndustrialAge</li>
+		<li IfModActive="cucumpear.LEDlights">ModPatches\LEDLights</li>
+		<li IfModActive="Mlie.SDPillowsAndBeanbags">ModPatches\PillowsBeanBags</li>
+		<li IfModActive="Haplo.PowerSwitch">ModPatches\PowerSwitch</li>
+		<li IfModActive="Mlie.Prospecting">ModPatches\Prospecting</li>
+		<li IfModActive="kongmd.qee">ModPatches\QEE</li>
+		<li IfModActive="UnlimitedHugs.RemoteTech">ModPatches\RemoteTech</li>
+		<li IfModActive="Dubwise.Rimefeller">ModPatches\Rimefeller</li>
+		<li IfModActive="spdskatr.projectrimfactory">ModPatches\Rimfactory</li>
+		<li IfModActive="Crustypeanut.RC2.Core">ModPatches\RimCuisine2</li>
+		<li IfModActive="rimsenal.core">ModPatches\Rimsenal</li>
+		<li IfModActive="Torann.ARimworldOfMagic">ModPatches\RimworldMagic</li>
+		<li IfModActive="Mlie.RoadsOfTheRim">ModPatches\RoadsoftheRim</li>
+		<li IfModActive="ratys.rtfuse, ratys.rtsolarflareshield">ModPatches\RT Mods</li>
+		<li IfModActive="kentington.saveourship2">ModPatches\SaveOurShip</li>
+		<li IfModActive="Mlie.SimplyMoreBridges">ModPatches\SimplyMoreBridges</li>
+		<li IfModActive="Albion.SparklingWorlds.Full, Albion.SparklingWorlds.Core">ModPatches\Sparkling Worlds</li>
+		<li IfModActive="GT.Sam.TilledSoil">ModPatches\TilledSoil</li>
+		<li IfModActive="Mlie.TropickappRainforestMod">ModPatches\TropickappRainforestMod</li>
+		<li IfModActive="nephlite.orbitaltradecolumn">ModPatches\UtilityColumns</li>
+		<li IfModActive="VanillaExpanded.VBrewE">ModPatches\VanillaBrewingEx</li>
+		<li IfModActive="VanillaExpanded.VCookE">ModPatches\VanillaCookingEx</li>
+		<li IfModActive="VanillaExpanded.VPlantsESucculents">ModPatches\VanillaPlantsEx</li>
+		<li IfModActive="VanillaExpanded.VanillaTraitsExpanded">ModPatches\VanillaTraitsEx</li>
+		<li IfModActive="XCOMWeapons.velcroboy333, XCOMArmor.velcroboy333">ModPatches\XCOM</li>
+		<li>Common</li>
+	</v1.3>-->
+</loadFolders>	

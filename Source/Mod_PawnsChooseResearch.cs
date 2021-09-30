@@ -29,7 +29,7 @@ namespace PawnsChooseResearch
                 }
                 else
                 {
-                    listingStandard.CheckboxLabeled("Interests Affect Research: ", ref ModSettings_PawnsChooseResearch.checkPassions);
+                    listingStandard.CheckboxLabeled("Interests Affect Research: ", ref ModSettings_PawnsChooseResearch.checkInterests);
                 }
                 listingStandard.CheckboxLabeled("Avoid too advanced research: ", ref ModSettings_PawnsChooseResearch.preferSimple);
             }

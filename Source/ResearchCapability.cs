@@ -107,7 +107,7 @@ namespace PawnsChooseResearch
 
         public static bool IsAbhorrent(Pawn pawn, ResearchProjectDef researchProject)
         {
-            if ((researchProject.HasModExtension<ResearchCategory>() && researchProject.GetModExtension<ResearchCategory>().neverTech > 0) || researchProject.baseCost > 90000)
+            if (researchProject.GetModExtension<ResearchCategory>().neverTech > 0 || researchProject.baseCost > 90000)
             {
                 //Log.Message(researchProject.label + " is abhorred by all");
                 return true;

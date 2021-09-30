@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Excluded>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\.vs</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\Manifest.txt</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\SkillLinks.png</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\Source</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\SpecialPreferences.png</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\Trait Preferences.png</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\TraitPatch_Template</exclude>
+  </Excluded>
+</Configuration>

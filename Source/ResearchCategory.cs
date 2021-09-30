@@ -26,8 +26,8 @@ namespace PawnsChooseResearch
 
         public static void CategoryCheck()
         {
-            //Log.Message("Running Test");
-            //CECheck();
+            Log.Message("Running Test");
+            CECheck();
             /*
             foreach (ResearchProjectDef project in DefDatabase<ResearchProjectDef>.AllDefsListForReading)
             {

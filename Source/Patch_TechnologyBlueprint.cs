@@ -17,7 +17,7 @@ namespace PawnsChooseResearch
         {
             MethodBase method = AccessTools.Method(Verse.GenTypes.GetTypeInAnyAssembly("TBnRE.Utility", null), "BoostResearch");
             //Log.Message("Found method");
-            //if (method == null) Log.Message("But it is null");
+            if (method == null) Log.Message("But it is null");
             return method;
         }
 
