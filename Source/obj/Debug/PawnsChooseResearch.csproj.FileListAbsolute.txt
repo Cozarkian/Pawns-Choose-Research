@@ -25,3 +25,7 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\Source\obj\Debug\PawnsChooseResearch.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\PawnsChooseResearch\Common\Assemblies\PawnsChooseResearch.dll
 P:\SteamLibrary\steamapps\common\RimWorld\Mods\PawnsChooseResearch\Common\Assemblies\PawnsChooseResearch.dll
+C:\Users\Admin\Documents\Docs\Game Resources\RimWorld\MyMods (1.3)\PawnsChooseResearch\Common\Assemblies\PawnsChooseResearch.dll
+C:\Users\Admin\Documents\Docs\Game Resources\RimWorld\MyMods (1.3)\PawnsChooseResearch\Source\obj\Debug\PawnsChooseResearch.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Docs\Game Resources\RimWorld\MyMods (1.3)\PawnsChooseResearch\Source\obj\Debug\PawnsChooseResearch.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Docs\Game Resources\RimWorld\MyMods (1.3)\PawnsChooseResearch\Source\obj\Debug\PawnsChooseResearch.dll
