@@ -9,7 +9,6 @@ namespace PawnsChooseResearch
         public static bool restoreControl = false;
         public static bool mustHaveSkill = true;
         public static bool checkPassions = true;
-        public static bool checkInterests = true;
         public static bool checkTraits = true;
         public static bool preferSimple = true;
 
@@ -20,9 +19,9 @@ namespace PawnsChooseResearch
         {
             interestsActivated = false;
             vanillaTraitsActivated = false;
-            if (ModLister.GetActiveModWithIdentifier("Cozarkian.PawnsChooseInterests") != null)
+            if (ModLister.GetActiveModWithIdentifier("Mlie.DInterestsFramework") != null || ModLister.GetActiveModWithIdentifier("dame.interestsframework") != null)
             {
-                interestsActivated = true;
+                interestsActivated = true; 
             }
             if (ModLister.GetActiveModWithIdentifier("VanillaExpanded.VanillaTraitsExpanded") != null)
             {
@@ -36,7 +35,6 @@ namespace PawnsChooseResearch
             Scribe_Values.Look(ref restoreControl, "restoreControl", false);
             Scribe_Values.Look(ref mustHaveSkill, "musthaveSkill", true);
             Scribe_Values.Look(ref checkPassions, "checkPassions", true);
-            Scribe_Values.Look(ref checkInterests, "checkInterests", true);
             Scribe_Values.Look(ref checkTraits, "checkTraits", true);
             Scribe_Values.Look(ref preferSimple, "preferSimple", true);
 

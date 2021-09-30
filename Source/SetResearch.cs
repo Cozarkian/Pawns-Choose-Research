@@ -11,7 +11,7 @@ namespace PawnsChooseResearch
         {
             List<ResearchProjectDef> possibleProjects = new List<ResearchProjectDef>();
             int researchSkill = pawn.skills.GetSkill(SkillDefOf.Intellectual).Level;
-            for (int i = (int)(researchSkill / 4 + 1); i >= 0; i--)
+            for (int i = 3; i >= 0; i--)
             {
                 if (DefDatabase<ResearchProjectDef>.AllDefsListForReading.Where((ResearchProjectDef x) => x.CanStartNow).TryRandomElement(out ResearchProjectDef research))
                 {
@@ -45,7 +45,7 @@ namespace PawnsChooseResearch
                     myProjectScore = projectScore;
                 }
             }
-            //Log.Message("Choosing " + myProject.label);
+            Log.Message("Choosing " + myProject.label);
             ResearchRecord.SetResearchPlan(pawn, myProject);
         }
 
