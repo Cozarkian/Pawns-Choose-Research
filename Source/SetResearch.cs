@@ -10,7 +10,6 @@ namespace PawnsChooseResearch
         public static void SetRandomResearch(Pawn pawn)
         {
             List<ResearchProjectDef> possibleProjects = new List<ResearchProjectDef>();
-            int researchSkill = pawn.skills.GetSkill(SkillDefOf.Intellectual).Level;
             for (int i = 3; i >= 0; i--)
             {
                 if (DefDatabase<ResearchProjectDef>.AllDefsListForReading.Where((ResearchProjectDef x) => x.CanStartNow).TryRandomElement(out ResearchProjectDef research))

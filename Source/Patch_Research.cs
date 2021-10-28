@@ -17,7 +17,7 @@ namespace PawnsChooseResearch
             {
                 //Log.Message("Null check");
                 ResearchProjectDef myProject = ResearchRecord.CurrentProject(researcher);
-                if (myProject == null || myProject.IsFinished)
+                if (myProject == null || !myProject.CanStartNow)
                 {
                     if (ModSettings_PawnsChooseResearch.groupResearch)
                     {

@@ -1,3 +1,7 @@
+[10/2021]
+Fixed error with "Lush" trait from Vanilla Trait Expanded.
+Removed unnecessary logging.
+
 [09/2021]
 Fixed error with trait-abhorrent research choices.
 Integrated Pawns Choose Interests for Interests (continued).

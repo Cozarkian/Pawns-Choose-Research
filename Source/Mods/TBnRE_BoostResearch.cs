@@ -5,7 +5,7 @@ using HarmonyLib;
 namespace PawnsChooseResearch
 {
     [HarmonyPatch]
-    class Patch_TechnologyBlueprint
+    class TBnRE_RevEng
     {      
         static bool Prepare(MethodInfo original)
         {
@@ -24,7 +24,15 @@ namespace PawnsChooseResearch
         static void Postfix(ref ResearchProjectDef chosenResearchProject, Pawn usedBy)
         {
             //Log.Message("Patching Research Boost");
-            if (!ModSettings_PawnsChooseResearch.groupResearch && !ResearchCapability.IsIncapable(usedBy, chosenResearchProject) && !ResearchCapability.IsAbhorrent(usedBy, chosenResearchProject))
+            if (!ModSettings_PawnsChooseResearch.TBnRE_Activated)
+            {
+                return;
+            }
+            if (ModSettings_PawnsChooseResearch.groupResearch)
+            {
+                ResearchRecord.groupProject = chosenResearchProject;
+            }
+            else if (!ResearchCapability.IsIncapable(usedBy, chosenResearchProject) && !ResearchCapability.IsAbhorrent(usedBy, chosenResearchProject))
             {
                 ResearchRecord.SetResearchPlan(usedBy, chosenResearchProject);
             }

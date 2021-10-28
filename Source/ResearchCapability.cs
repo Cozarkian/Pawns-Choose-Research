@@ -118,9 +118,13 @@ namespace PawnsChooseResearch
             {
                 if (traits[i].def == TraitDefOf.Pyromaniac)
                 {
-                    if (researchProject.defName == "Firefoam" || researchProject.prerequisites.Contains(ResearchProjectDef.Named("Firefoam")))
+                    if (researchProject.defName == "Firefoam") 
                     {
                         return true;
+                    }
+                    if (researchProject.prerequisites != null && researchProject.prerequisites.Contains(ResearchProjectDef.Named("Firefoam")))
+                    {
+                    return true;
                     }
                 }
                 if (traits[i].def == TraitDefOf.BodyPurist)
@@ -129,9 +133,12 @@ namespace PawnsChooseResearch
                     {
                         return true;
                     }
-                    foreach (ResearchProjectDef prerequisite in researchProject.prerequisites)
+                    if (researchProject.prerequisites != null)
                     {
-                        if (prerequisite.GetModExtension<ResearchCategory>().cyberTech > 0) return true;
+                        for (int j = 0; j < researchProject.prerequisites.Count; j++)
+                        {
+                            if (researchProject.prerequisites[j].GetModExtension<ResearchCategory>().cyberTech > 0) return true;
+                        }
                     }
                 }
                 if (traits[i].def == TraitDefOf.DrugDesire && traits[i].Degree < 0)

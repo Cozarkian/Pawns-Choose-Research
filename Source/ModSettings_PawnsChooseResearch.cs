@@ -14,6 +14,8 @@ namespace PawnsChooseResearch
 
         public static bool interestsActivated = false;
         public static bool vanillaTraitsActivated = false;
+        //public static bool VBE_Activated = false;
+        public static bool TBnRE_Activated = true;
 
         public static void CheckMods()
         {
@@ -38,6 +40,8 @@ namespace PawnsChooseResearch
             Scribe_Values.Look(ref checkTraits, "checkTraits", true);
             Scribe_Values.Look(ref preferSimple, "preferSimple", true);
 
+            //Scribe_Values.Look(ref VBE_Activated, "VBE_Activated", true);
+            Scribe_Values.Look(ref TBnRE_Activated, "TBnRE_Activated", true);
             base.ExposeData();
         }
     }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Altered Carbon -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimworld: Altered Carbon</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="AC_SleeveProduction"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<medTech>1</medTech>
+				<cyberTech>1</cyberTech>
+			</value>
+		</match>
+	</Operation>
+	
+	<!-- Android -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Androids Expanded</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="ChJAndroidDroidRepairParts" or defName="ChJAndroidDroidRepairKit" or defName="ChJAndroidSolarpanelApparel" or defName="ChJAndroidPortableChemfuelGenerator" or defName="ChJAndroidDroidBatteries" or defName="ChJAndroidMaidDress" or defName="ChJAndroidSpacerMaidDress" or defName="ChJDroidPrinter" or defName="ChJAndroidPrinter" or defName="ChJAndroidUpgrade_Hub" or defName="ChJAndroidUpgrade_Physique" or defName="ChJAndroidUpgrade_Skin" or defName="ChJAndroidUpgrade_Utility" or defName="ChJAndroidUpgrade_Proficiency" or defName="ChJAndroidUpgrade_Archotech" or defName="ChJBattleDroid"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<craftTech>1</craftTech>
+				<cyberTech>1</cyberTech>
+			</value>
+		</match>
+	</Operation>	
+	
+	<!-- Android Expanded-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Androids Expanded</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="Build_Drones" or defName="Build_SpacerDroids"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<craftTech>1</craftTech>
+				<cyberTech>1</cyberTech>
+			</value>
+		</match>
+	</Operation>	
+	
+	<!-- EPOE -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Expanded Prosthetics and Organ Engineering</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[defName="BasicProsthetics" or defName="SurrogateOrgans" or defName="BrainSurgery" or defName="RibReplacements" or defName="AdvancedBionics" or defName="BionicSpine" or defName="AdvancedBionicSpine" or defName="SyntheticOrgans" or defName="AdvancedBrainSurgery"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+					<value>
+							<medTech>1</medTech>
+							<cyberTech>1</cyberTech>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ResearchProjectDef[defName="BionicWarfare" or defName="AdvancedBionicWarfare" or defName="ExoskeletonSuits"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+					<value>
+						<meleeTech>1</meleeTech>
+					</value>
+				</li>				
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- RBSE -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rah's Bionics and Surgery Expansion</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="RegenerativeMedicine" or defName="OrganTransplantation" or defName="AdvancedBionics" or defName="SyntheticOrgans" or defName="Neuroscience"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<medTech>1</medTech>
+				<cyberTech>1</cyberTech>
+			</value>
+		</match>
+	</Operation>
+</Patch>
+

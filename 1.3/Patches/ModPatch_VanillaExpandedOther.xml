@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Vanilla Apparel Expanded -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Apparel Expanded</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="VAE_CasualWear" or defName="VAE_FormalWear" or defName="VAE_WorkAttire" or defName="VAE_SterileAttire" or defName="VAE_MilitaryClothing"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<craftTech>1</craftTech>
+			</value>			
+		</match>
+	</Operation>
+	<!-- Vanilla Factions - Medieval -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Medieval</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="VFEM_HeavyCrossbow"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<rangedTech>1</rangedTech>
+			</value>
+		</match>
+	</Operation>
+	<!-- Vanilla Books Expanded -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Books Expanded</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ResearchProjectDef[defName="VBE_Writing" or defName="VBE_Printing"]/modExtensions/li[@Class="PawnsChooseResearch.ResearchCategory"]</xpath>
+			<value>
+				<socialTech>1</socialTech>
+			</value>
+		</match>
+	</Operation>	
+</Patch>

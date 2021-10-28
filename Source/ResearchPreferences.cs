@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using UnityEngine;
 using RimWorld;
 using Verse;
-using DInterests;
 
 namespace PawnsChooseResearch
 {
@@ -11,7 +9,7 @@ namespace PawnsChooseResearch
         public static float GetPreferenceScore(Pawn pawn, ResearchProjectDef researchProject)
         {
             float score = 1 + researchProject.ProgressPercent / 2;
-            Log.Message("Getting score for " + researchProject.label + ", base score is " + score);
+            //Log.Message("Getting score for " + researchProject.label + ", base score is " + score);
 
             if (researchProject.HasModExtension<ResearchCategory>())
             {
@@ -19,44 +17,39 @@ namespace PawnsChooseResearch
                 {
                     if (ModSettings_PawnsChooseResearch.interestsActivated)
                     {
-                        score += GetInterestScore(pawn, researchProject);
-                        Log.Message("Score after interests is " + score);
+                        score += Interests_Integration.GetInterestScore(pawn, researchProject);
+                        //Log.Message("Score after interests is " + score);
                     }
                     else
                     {
                         score += GetPassionScore(pawn, researchProject);
-                        Log.Message("Score after passions is " + score);
+                        //Log.Message("Score after passions is " + score);
                     }
                 }
                 if (ModSettings_PawnsChooseResearch.checkTraits)
                 {
                     score += GetTraitScore(pawn, researchProject);
-                    Log.Message("Score after traits is " + score);
+                    //Log.Message("Score after traits is " + score);
                 }
                 score += GetSpecialTraitScore(pawn, researchProject);
-                Log.Message("Score after special traits is " + score);
+                //Log.Message("Score after special traits is " + score);
                 //Core Techs
                 if (researchProject.GetModExtension<ResearchCategory>().coreTech > 0)
                 {
-                    score += pawn.skills.GetSkill(SkillDefOf.Intellectual).Level / 10f;
-                    Log.Message("Score for core tech is " + score);
+                    score += pawn.skills.GetSkill(SkillDefOf.Intellectual).Level * .05f;
+                    //Log.Message("Score for core tech is " + score);
                 }
-            }
-            else
-            {
-                score += pawn.skills.GetSkill(SkillDefOf.Intellectual).Level / 10f;
-                Log.Message("Score for mod research is " + score);
             }
             if (ModSettings_PawnsChooseResearch.preferSimple)
             {
                 if (researchProject.techLevel > Faction.OfPlayer.def.techLevel)
                 {
                     score -= ((int)Faction.OfPlayerSilentFail.def.techLevel - (int)researchProject.techLevel) / pawn.skills.GetSkill(SkillDefOf.Intellectual).Level;
-                    Log.Message("Score after tech level is " + score);
+                    //Log.Message("Score after tech level is " + score);
                 }
             }
             score *= Rand.Range(.5f, 1f);
-            Log.Message("Final score is " + score);
+            //Log.Message("Final score is " + score);
             return score;
         }
         private static float GetPassionScore(Pawn pawn, ResearchProjectDef researchProject)
@@ -144,85 +137,6 @@ namespace PawnsChooseResearch
         }
 
         //Uses Interests Mod
-        private static float GetInterestScore(Pawn pawn, ResearchProjectDef researchProject)
-        {
-            float interestScore = 0f;
-            bool interestTech = false;
-            //Shooting
-            if (researchProject.GetModExtension<ResearchCategory>().rangedTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Shooting).passion) / 100;
-                interestTech = true;
-            }
-
-            //Melee
-            if (researchProject.GetModExtension<ResearchCategory>().meleeTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Melee).passion) / 100;
-                interestTech = true;
-            }
-            //Construction
-            if (researchProject.GetModExtension<ResearchCategory>().constructionTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Construction).passion) / 100;
-                interestTech = true;
-            }
-            //Mining
-            if (researchProject.GetModExtension<ResearchCategory>().miningTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Mining).passion) / 100;
-                interestTech = true;
-            }
-            //Cooking
-            if (researchProject.GetModExtension<ResearchCategory>().cookingTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Cooking).passion) / 100;
-                interestTech = true;
-            }
-            //Growing
-            if (researchProject.GetModExtension<ResearchCategory>().plantTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Plants).passion) / 100;
-                interestTech = true;
-            }
-            //Animals
-            if (researchProject.GetModExtension<ResearchCategory>().animalTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Animals).passion) / 100;
-                interestTech = true;
-            }
-            //Crafting
-            if (researchProject.GetModExtension<ResearchCategory>().craftTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Crafting).passion) / 100;
-                interestTech = true;
-            }
-            //Artistic
-            if (researchProject.GetModExtension<ResearchCategory>().artTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Artistic).passion) / 100;
-                interestTech = true;
-            }
-            //Medical
-            if (researchProject.GetModExtension<ResearchCategory>().medTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Medicine).passion) / 100;
-                interestTech = true;
-            }
-            //Social
-            if (researchProject.GetModExtension<ResearchCategory>().socialTech > 0)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Social).passion) / 100;
-                interestTech = true;
-            }
-            //Intellectual
-            if (!interestTech)
-            {
-                interestScore += InterestBase.GetValue((int)pawn.skills.GetSkill(SkillDefOf.Intellectual).passion) / 100;
-            }
-            return interestScore;
-        }
-
         private static float GetTraitScore(Pawn pawn, ResearchProjectDef researchProject)
         {
             float traitScore = 0f;
@@ -467,86 +381,11 @@ namespace PawnsChooseResearch
                         spTraitScore -= 1f;
                     }
                 }
-
                 // Vanilla Traits Expanded Special Preferences
                 if (ModSettings_PawnsChooseResearch.vanillaTraitsActivated)
                 {
-                    if (curTrait == TraitDef.Named("VTE_Clumsy"))
-                    {
-                        if (researchProject == ResearchProjectDef.Named("Autodoors"))
-                        {
-                            spTraitScore += 1f;
-                        }
-                    }
-                    if (curTrait == TraitDef.Named("VTE_ColdInclined"))
-                    {
-                        if (researchProject == ResearchProjectDef.Named("PassiveCooler") ||
-                            researchProject == ResearchProjectDef.Named("AirConditioning"))
-                        {
-                            spTraitScore += 3f;
-                        }
-                    }
-                    if (curTrait == TraitDef.Named("VTE_Neat"))
-                    {
-                        if (researchProject == ResearchProjectDef.Named("SterileMaterials"))
-                        {
-                            spTraitScore += 3;
-                        }
-                    }
-                    if (curTrait == TraitDef.Named("VTE_CouchPotato"))
-                    {
-                        if (researchProject == ResearchProjectDef.Named("TubeTelevision") ||
-                            researchProject == ResearchProjectDef.Named("FlatscreenTelevision"))
-                        {
-                            spTraitScore += 3;
-                        }
-                    }
-                    if (curTrait == TraitDef.Named("VTE_ChildOfSea"))
-                    {
-                        if (researchProject == ResearchProjectDef.Named("WatermillGenerator"))
-                        {
-                            spTraitScore += 3;
-                        }
-                    }
-                    if (curTrait == TraitDef.Named("VTE_ChildOfMountain"))
-                    {
-                        if (researchProject == ResearchProjectDef.Named("GeothermalPower") ||
-                              researchProject == ResearchProjectDef.Named("DeepDrilling") ||
-                              researchProject == ResearchProjectDef.Named("GroundPenetratingScanner"))
-                        {
-                            spTraitScore += 3;
-                        }
-                    }
-                    if (curTrait == TraitDef.Named("VTE_DrunkenMaster") ||
-                        curTrait == TraitDef.Named("VTE_Lush"))
-                    {
-                        if (researchProject == ResearchProjectDef.Named("Brewing") ||
-                            researchProject.prerequisites.Contains(ResearchProjectDef.Named("Brewing")))
-                        {
-                            spTraitScore += 3;
-                        }
-                    }
-                    if (curTrait == TraitDef.Named("VTE_Ecologist"))
-                    {
-                        if (researchProject == ResearchProjectDef.Named("SolarPanels") ||
-                            researchProject == ResearchProjectDef.Named("WatermillGenerator") ||
-                            researchProject == ResearchProjectDef.Named("GeothermalPower"))
-                        {
-                            spTraitScore += 3;
-                        }
-                    }
-                    if (curTrait == TraitDef.Named("VTE_Wanderlust"))
-                    {
-                        if (researchProject == ResearchProjectDef.Named("PackagedSurvivalMeal") ||
-                            researchProject == ResearchProjectDef.Named("TransportPod"))
-                        {
-                            spTraitScore += 3;
-                        }
-                    }
-                    if (traits[i].def == TraitDef.Named("VTE_Technophobe"))
-                    {
-                        spTraitScore -= (int)researchProject.techLevel;
-                    }
+                    //Log.Message("Checking " + curTrait.label + " in VTE");
+                    spTraitScore += VTE_Integration.GetSpecialTraitScore_VTE(researchProject, curTrait);    
                 }
             }
             return spTraitScore;

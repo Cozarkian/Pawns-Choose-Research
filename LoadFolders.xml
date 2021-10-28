@@ -48,7 +48,7 @@
 		<li IfModActive="VanillaExpanded.VPlantsESucculents">ModPatches\VanillaPlantsEx</li>
 		<li IfModActive="VanillaExpanded.VanillaTraitsExpanded">ModPatches\VanillaTraitsEx</li>
 		<li IfModActive="XCOMWeapons.velcroboy333, XCOMArmor.velcroboy333">ModPatches\XCOM</li>
-		<li>Common</li>
+		<li>1.2</li>
 	</v1.2>
 	<v1.3>
 		<li IfModActive="Cozarkian.VarietyMatters.Meals">ModPatches\VarietyMeals</li>
@@ -97,6 +97,6 @@
 		<li IfModActive="VanillaExpanded.VPlantsESucculents">ModPatches\VanillaPlantsEx</li>
 		<li IfModActive="VanillaExpanded.VanillaTraitsExpanded">ModPatches\VanillaTraitsEx</li>
 		<li IfModActive="XCOMWeapons.velcroboy333, XCOMArmor.velcroboy333">ModPatches\XCOM</li>
-		<li>Common</li>
+		<li>1.3</li>
 	</v1.3>
 </loadFolders>	

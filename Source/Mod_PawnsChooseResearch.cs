@@ -23,15 +23,25 @@ namespace PawnsChooseResearch
                     listingStandard.CheckboxLabeled("Must Have Skill Capability: ", ref ModSettings_PawnsChooseResearch.mustHaveSkill);
                 }
                 listingStandard.CheckboxLabeled("Traits Affect Research: ", ref ModSettings_PawnsChooseResearch.checkTraits);
-                if (!ModSettings_PawnsChooseResearch.interestsActivated)
-                {
-                    listingStandard.CheckboxLabeled("Passions Affect Research: ", ref ModSettings_PawnsChooseResearch.checkPassions);
-                }
-                else
+                if (ModSettings_PawnsChooseResearch.interestsActivated)
                 {
                     listingStandard.CheckboxLabeled("Interests Affect Research: ", ref ModSettings_PawnsChooseResearch.checkPassions);
                 }
+                else
+                {
+                    listingStandard.CheckboxLabeled("Passions Affect Research: ", ref ModSettings_PawnsChooseResearch.checkPassions);
+                }
                 listingStandard.CheckboxLabeled("Avoid too advanced research: ", ref ModSettings_PawnsChooseResearch.preferSimple);
+                if (ModLister.GetActiveModWithIdentifier("GwinnBleidd.ResearchTweaks") != null)
+                {
+                    listingStandard.CheckboxLabeled("Reverse Engineering Assigns Research", ref ModSettings_PawnsChooseResearch.TBnRE_Activated);
+                }
+                /*
+                if (ModLister.GetActiveModWithIdentifier("VanillaExpanded.VBooksE") != null)
+                {
+                    listingStandard.CheckboxLabeled("Technology Blueprints Assign Research", ref ModSettings_PawnsChooseResearch.VBE_Activated);
+                }
+                */
             }
             listingStandard.End();
             base.DoSettingsWindowContents(inRect);
