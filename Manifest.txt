@@ -1,6 +1,7 @@
 [10/2021]
 Fixed error with "Lush" trait from Vanilla Trait Expanded.
 Removed unnecessary logging.
+Fixed bug if researcher has 0 skill and prefers simple tech.
 
 [09/2021]
 Fixed error with trait-abhorrent research choices.

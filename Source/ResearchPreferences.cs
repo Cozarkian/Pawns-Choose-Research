@@ -44,7 +44,7 @@ namespace PawnsChooseResearch
             {
                 if (researchProject.techLevel > Faction.OfPlayer.def.techLevel)
                 {
-                    score -= ((int)Faction.OfPlayerSilentFail.def.techLevel - (int)researchProject.techLevel) / pawn.skills.GetSkill(SkillDefOf.Intellectual).Level;
+                    score -= ((int)Faction.OfPlayerSilentFail.def.techLevel - (int)researchProject.techLevel) / (pawn.skills.GetSkill(SkillDefOf.Intellectual).Level + 1f);
                     //Log.Message("Score after tech level is " + score);
                 }
             }
